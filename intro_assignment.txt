@@ -1,0 +1,50 @@
+1. 
+	1. string/text
+	2. int
+	3. date
+	4. float
+	5. string for $15.99 or double/decimal to store just the numbers.
+
+2. A database is used to store data in a way that makes for easy searching, can handle multiple applications accesssing the data, and persists beyond the end of a particualr data application process. Text tiles are used to make the data readable by humans.
+
+3. SQL is a declaritive language rather than a procedural language. So we use SQL to tell the database what to do instead of setting up an algorithm.
+
+4. At a high level, all peices of a database fit together as tables that contain rows and columns that represent information. 
+
+5. 
+	Table: intersection of columns and rows
+	Row: a single, implicitly structured data item in a table
+	Column: a set of data values of a particular simple type, one value for each row. Colums define what the data represent.
+	Value: a piece of information that the column name describes
+
+6. String, int, boolean
+
+7. Select all dates and amoutnts from the payments table:
+	5/1/2016   1500.00	
+	5/10/2016  37.00	
+	5/15/2016  124.93
+	5/23/2016  54.72
+
+	Select all amounts from the payments table where the amount is greater that $500
+		1500.00	
+
+	Select all results from the matents tayple where the payee is Mega Foods
+		5/15/2016	Mega Foods	124.93	Groceries
+
+8. SELECT email, signup 
+   FROM users 
+   WHERE name = "DeAndre Data";
+
+   	datad@comcast.net	2008-01-20
+
+   SELECT userid 
+   FROM users 
+   WHERE email = "aleesia.algorithm@uw.edu";
+
+   	1
+
+   SELECT *
+   FROM users
+   WHERE userid = 4;
+
+   	4	Brandy Boolean	bboolean@nasa.gov	1999-10-15
