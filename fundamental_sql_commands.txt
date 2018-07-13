@@ -4,6 +4,65 @@
    DELETING: DELETE FROM
    			 ALTER TALBE, DROP COLUMN
 
-2. 
+2. CREATE TABLE table name (
+	column data type,
+	column data type,
+
+	);
+
+   INSERT INTO table name (column(s))
+   VALUES (value(s));
+   
+   UPDATE table name SET column=value WHERE column=value AND column=value;
+
+   DELETE FROM table name WHERE column=value;
+
+   ALTER TABLE table name ADD COLUMN description text SET DEFAULT value;
+
+   ALTER TABLE table name DROP COLUMN description;
+
+   DROP TABLE table name;
+
+
 
 3. Numeric, boolean, 
+
+4. CREATE TABLE guests (
+	guest_id integer,
+	fname string,
+	lname string,
+	RSVP_sent bool,
+	guest_num integer,
+	meal_num float,
+
+	);
+
+   ALTER TABLE guests ADD COLUMN sent_card bool SET DEFAULT 'false';
+
+   ALTER TABLE guests DROP COLUMN meal_num;
+
+   ALTER TABLE guests ADD COLUMN table_num integer SET DEFAULT 'null';
+
+   DROP TABLE guests;
+
+5. CREATE TABLE books (
+	ISBN integer,
+	title string,
+	author string,
+	genre string,
+	pub_date date,
+	copy_num integer,
+	copies_avail integer,
+
+	);
+   
+   
+
+
+
+
+
+
+
+
+
