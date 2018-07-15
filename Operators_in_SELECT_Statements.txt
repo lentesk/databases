@@ -1,0 +1,96 @@
+1. SELECT * FROM users WHERE state = "GA";
+
+2. FROM, WHERE, GROUP BY, HAVING, SELECT, ORBER BY, LIMIT
+
+   Friends Will Give Happy Smiles Of Love
+
+3.
+
+SELECT "name", "gender", "age"
+FROM dogs
+WHERE "breed" LIKE 'labrador%';
+
+SELECT "id"
+FROM dogs
+WHERE "age" < 1;;
+
+SELECT "name", "age"
+FROM dogs
+WHERE "gender" = 'F' AND "weight" > 35;
+
+SELECT *
+FROM dogs
+WHERE "breed" NOT LIKE '%shepherd%';
+
+SELECT "id", "breed", "weight"
+FROM dogs
+WHERE "breed" != 'great dane' AND "weight" <= 40;
+
+4.
+
+all names and adoption dates from the cats table
+name	adoption_date
+Mushi	2016-03-22T00:00:00.000Z
+Seashell	null
+Azul	2016-04-17T00:00:00.000Z
+Victoire	2016-09-01T00:00:00.000Z
+Nala	null
+
+all names and ages from the cats table
+name	age
+Mushi	1
+Seashell	7
+Azul	3
+Victoire	7
+Nala	1
+
+5.
+
+SELECT * FROM cats;
+
+SELECT * FROM cats WHERE age > 1;
+SELECT * FROM cats WHERE age = 1
+LIMIT 1;
+
+SELECT name FROM cats;
+
+6.
+
+> used to find data where value is greater than the target
+< used to find data where value is less than the target
+>= used to data where value is greater than or equal to the target
+>= used to data where value is less than or equal to the target
+= used to data where value is equal to the target
+!= used to data where value is not equal to the target
+<> used to data where value is greater than or less than the target
+LIKE used to find data where value contains a pattern match to target string
+BETWEEN used to data where value is greater than or qual to and less than or equal to the target
+IS DISTINCT FROM used in place of <> when one of the inputs could be null.
+IS NULL used data where value is null in desired field
+AND used when both expressions are true for the field
+OR used when at least one expression is true for the field
+
+7. SELECT name FROM cats WHERE gender = 'F';
+
+
+Female cat's names
+
+name
+Seashell
+Nala
+
+SELECT name FROM cats WHERE age <> 3;
+
+Cat's names ages greater than or less than three
+name
+Mushi
+Seashell
+Victoire
+Nala
+
+SELECT ID FROM cats WHERE name != ‘Mushi’ AND gender = ‘M’;
+
+All cats IDs except for Mushi or male cats
+id
+3
+4
