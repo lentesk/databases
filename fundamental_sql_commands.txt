@@ -12,7 +12,7 @@
 
    INSERT INTO table name (column(s))
    VALUES (value(s));
-   
+
    UPDATE table name SET column=value WHERE column=value AND column=value;
 
    DELETE FROM table name WHERE column=value;
@@ -25,7 +25,7 @@
 
 
 
-3. Numeric, boolean, 
+3. Numeric, boolean,
 
 4. CREATE TABLE guests (
 	guest_id integer,
@@ -55,14 +55,56 @@
 	copies_avail integer,
 
 	);
-   
-   
+
+  INSERT INTO books (ISBN, title, author, genre, pub_date, copy_num, copies_avail)
+  VALUES
+  (9781583220542, 'A People's History of the United States', 'Howard Zinn', 'non-fiction' 1980, 3, 3),
+  (9781499376074, 'Cat's Cradle', 'Kurt Vonnegut','science fiction' 1963, 6, 4),
+  (0571252273, 'Rip It Up and Start Again', 'Simon Reynolds', 'non-fiction' 2005, 2, 1);
+
+  UPDATE books SET copies_avail=3 WHERE ISBN=9781499376074;
+
+  DELETE FROM books WHERE ISBN=9781583220542;
+
+  6.CREATE TABLE spacecrafts (
+  	id string,
+  	name string,
+  	year_launched integer,
+  	origin_country string,
+  	mission_desc string,
+  	orbiting_body string,
+  	is_operating boolean,
+    miles_from_earth integer,
+
+    );
+
+    INSERT INTO spacecrafts (id, name, year_launched, origin_country, mission_desc, orbiting_body, is_operating, miles_from_earth)
+    VALUES
+    ('2011-040A', 'Juno', 2011, USA, 'orbit jupiter for information', 'Jupiter', TRUE, 365000000),
+    ('2010-020D', 'Akatsuki', 2010, Japan, 'study the atmosphere of Venus', 'Venus', FALSE, 162177881),
+    ('2003-022A', 'Mars Express', 2003, ESA, 'exploring the planet Mars', 'MARS', TRUE, 33926867);
+
+    DELETE FROM spacecrafts WHERE id=2011-040A;
+    UPDATE spacecrafts SET is_operating=FALSE WHERE id='2003-022A';
 
 
+  7.CREATE TABLE emails (
+  	id interger,
+  	subject string,
+  	sender string,
+  	addl_recipeints string,
+  	body string,
+    timestamp timestamp,
+  	is_read boolean,
+    chain_id interger
 
+    );
 
+    INSERT INTO emails (id, subject, sender, addl_recipeints, body, timestamp, is_read, chain_id)
+    VALUES
+    ('1', 'Hello', 'mom@mom.com', 'null', 'just checking in love you bye', '2016-06-22 19:10:25-07', TRUE, 6),
+    ('2', 'Timesheet', 'boss@work.com', 'coworker@work.com', 'please update your timesheet so you can get paid', '2018-07-15 19:10:25-07', TRUE, 5),
+    ('3', 'Your Bill is Due', 'lender@studentloansforever.org', 'null', 'Another installment of your lifetime loan payment is due', '2016-06-22 19:10:25-07', TRUE, 6),
 
-
-
-
-
+    DELETE FROM emails WHERE id=3;
+    UPDATE emails SET is_red=FALSE WHERE id=2;
