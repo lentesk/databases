@@ -1,0 +1,88 @@
+1. You can find related data held in two seaprate data tables using JOIN statements.
+
+2. INNER - excludes all nulls on both sides
+   LEFT - table2 info for all table 1 - could have null results in table2
+   RIGHT - table1 info for all table2 - could have null results in table1
+
+3. A primary key is a field in a database that is unique and exists only once in the enire table which allows you to select a 
+   single row of data. Example: user_id in a users table
+
+   A foreign key is a field in a different table that can refer to the primary key in the first table to 
+   link the tables together. Example: order_id in the users table that connnects to the order table
+
+4. Aliasing is abbreviating table names 
+
+5. 
+
+SELECT p.name, c.salary, c.vacation_days 
+FROM professor AS p
+JOIN compensation AS c
+ON p.id = c.professor_id;
+
+6. You would use a NATURAL JOIN when you want to join columns in both tables and add one columin to the result for each pair of fields. You could use this to show repeated library users between user information and checked out books.
+
+7. 
+
+SELECT e.name, s.date, s.start_time, s.end_time 
+FROM employees AS e
+JOIN shifts AS s
+ON e.id = s.id;
+
+8.
+
+SELECT v.first_name, v.last_name, d.name
+FROM volunteers AS v
+LEFT JOIN dogs AS d
+ON v.foster_dog_id = d.id;
+
+SELECT c.name, a.first_name, a.last_name, ca.date
+FROM cats AS c
+JOIN cat_adoptions AS ca
+ON c.id = ca.cat_id
+JOIN adopters AS a
+ON ca.adopter_id = a.id
+WHERE ca.date > CURRENT_DATE - INTERVAL '30 DAYS';
+
+SELECT a.first_name, a.last_name
+FROM adopters AS a
+LEFT JOIN dog_adoptions AS da
+ON a.id = da.adopter_id
+WHERE a.id != 3;
+
+SELECT d.name, da.dog_id
+FROM dogs AS d
+LEFT JOIN dog_adoptions AS da
+ON d.id = da.dog_id
+WHERE da.dog_id = null;
+SELECT c.name, ca.cat_id
+FROM cats AS c
+LEFT JOIN cat_adoptions AS ca
+ON c.id = ca.cat_id
+WHERE ca.cat_id = null;
+
+SELECT a.first_name, a.last_name
+FROM adopters AS a
+JOIN dog_adoptions as da
+ON a.id = da.adopter_id;
+
+9.
+
+SELECT p.name, h.rank, b.isbn
+FROM patrons AS p
+JOIN holds AS h
+ON p.id = h.patron_id
+JOIN books AS b
+ON b.isbn = h.isbn
+WHERE b.isbn = '9136884926'
+ORDER BY h.rank;
+
+SELECT p.name, b.title
+FROM patrons AS p
+JOIN transactions AS t
+ON p.id = t.patron_id
+JOIN books AS b
+ON b.isbn = t.isbn
+ORDER BY p.name;
+
+
+
