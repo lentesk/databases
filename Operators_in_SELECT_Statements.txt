@@ -1,4 +1,4 @@
-1. SELECT * FROM users WHERE state = "GA";
+1. SELECT fields FROM table WHERE field = "value";
 
 2. FROM, WHERE, GROUP BY, HAVING, SELECT, ORBER BY, LIMIT
 
@@ -48,9 +48,7 @@ Nala	1
 
 SELECT * FROM cats;
 
-SELECT * FROM cats WHERE age > 1;
-SELECT * FROM cats WHERE age = 1
-LIMIT 1;
+SELECT DISTINCT age FROM cats;
 
 SELECT name FROM cats;
 
