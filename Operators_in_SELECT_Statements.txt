@@ -48,7 +48,7 @@ Nala	1
 
 SELECT * FROM cats;
 
-SELECT DISTINCT age FROM cats;
+SELECT MAX(name), age FROM cats GROUP BY 2;
 
 SELECT name FROM cats;
 
